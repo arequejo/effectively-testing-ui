@@ -1,0 +1,20 @@
+.accordion:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.button {
+  width: 100%;
+  padding: 8px 12px;
+  color: #ffffff;
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+  background-color: var(--gray);
+  font-size: 16px;
+  transition: all 0.2s;
+}
+
+.button:hover {
+  cursor: pointer;
+  border-color: var(--gray-dark);
+  background-color: var(--gray-dark);
+}

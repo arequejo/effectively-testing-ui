@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --gray-light: #edf2f7;
+  --gray: #718096;
+  --gray-dark: #4a5568;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  padding: 50px 100px;
+  background-color: #edf2f7;
+  font-family: Helvetica, sans-serif;
+}
