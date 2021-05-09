@@ -2,7 +2,7 @@ import Enzyme, { mount } from 'enzyme';
 import EnzymeAdapter from 'enzyme-adapter-react-16';
 import Accordion from '../Accordion';
 // import Accordion from '../Accordion.hooks';
-import * as data from '../data';
+import * as data from '../../../support/accordion-data';
 
 Enzyme.configure({ adapter: new EnzymeAdapter() });
 

@@ -1,4 +1,4 @@
-import { AccordionItem } from '../../support/types';
+import { AccordionItem } from './types';
 
 export const hats: AccordionItem = {
   title: 'Favorite Hats',
