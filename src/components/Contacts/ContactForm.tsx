@@ -101,7 +101,11 @@ function ContactForm({ isOpen, onClose, onSave }: ContactFormProps) {
             <Button variant="secondary" type="button" onClick={onClose}>
               Cancel
             </Button>
-            <Button variant="primary" disabled={status === Status.Pending}>
+            <Button
+              variant="primary"
+              type="submit"
+              disabled={status === Status.Pending}
+            >
               Save
             </Button>
           </ButtonGroup>
