@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // Testing library
 import '@testing-library/jest-dom';
 import { render, screen, waitFor } from '@testing-library/react';
