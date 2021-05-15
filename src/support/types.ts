@@ -10,3 +10,5 @@ export type Contact = {
   phoneNumber: string;
   email: string;
 };
+
+export type FormContact = Omit<Contact, 'id'>;
