@@ -23,6 +23,10 @@ function Contacts() {
   const [isFormOpen, setIsFormOpen] = React.useState<boolean>(false);
 
   React.useEffect(() => {
+    fetchContacts();
+  }, []);
+
+  function fetchContacts() {
     setStatus(Status.Pending);
     getContacts()
       .then((contacts) => {
@@ -32,7 +36,7 @@ function Contacts() {
       .catch(() => {
         setStatus(Status.Rejected);
       });
-  }, []);
+  }
 
   return (
     <>
@@ -57,7 +61,14 @@ function Contacts() {
         </ContactsList>
       )}
 
-      <ContactForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
+      <ContactForm
+        isOpen={isFormOpen}
+        onClose={() => setIsFormOpen(false)}
+        onSave={() => {
+          fetchContacts();
+          setIsFormOpen(false);
+        }}
+      />
     </>
   );
 }

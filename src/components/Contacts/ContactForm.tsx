@@ -10,6 +10,7 @@ import { FormContact } from '../../support/types';
 type ContactFormProps = {
   isOpen: boolean;
   onClose: () => void;
+  onSave: () => void;
 };
 
 const initialContactData: FormContact = {
@@ -19,7 +20,7 @@ const initialContactData: FormContact = {
   phoneNumber: '',
 };
 
-function ContactForm({ isOpen, onClose }: ContactFormProps) {
+function ContactForm({ isOpen, onClose, onSave }: ContactFormProps) {
   const [contact, setContact] = React.useState<FormContact>(initialContactData);
 
   return (
