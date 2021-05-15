@@ -58,7 +58,7 @@ function Modal({ isOpen, children, onClose }: ModalProps) {
   return (
     <Wrapper isOpen={isOpen} role="dialog">
       <Content>
-        <CloseButton onClick={onClose} type="button">
+        <CloseButton onClick={onClose} type="button" aria-label="close">
           <XIcon className="modal-close-icon" />
         </CloseButton>
         {children}
