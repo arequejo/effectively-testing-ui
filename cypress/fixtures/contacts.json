@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "photo": "https://loremflickr.com/100/100?random=1",
+    "name": "John Doe",
+    "email": "john.doe@example.com",
+    "phoneNumber": "6561234567"
+  },
+  {
+    "id": 2,
+    "photo": "https://loremflickr.com/100/100?random=2",
+    "name": "Jane Doe",
+    "email": "jane.doe@example.com",
+    "phoneNumber": "6567654321"
+  },
+  {
+    "id": 3,
+    "photo": "https://loremflickr.com/100/100?random=3",
+    "name": "Foo Bar",
+    "email": "foo.bar@example.com",
+    "phoneNumber": "6561726354"
+  }
+]
