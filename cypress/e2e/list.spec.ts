@@ -12,34 +12,36 @@ describe('Contacts', () => {
       const contacts = response.body as Contact[];
 
       // Contacts
-      cy.get('.sc-bdnxRM.dOutf')
+      cy.findAllByRole('listitem')
         .should('have.length', contacts.length)
         .each(($contact, index) => {
           const contact = contacts[index];
 
-          cy.wrap($contact).as('contact');
+          cy.wrap($contact).within(() => {
+            // Image
+            cy.findByRole('img', { name: /contact/i }).should(
+              'have.attr',
+              'src',
+              contact.photo
+            );
 
-          // Image
-          cy.get('@contact')
-            .find('.sc-dlnjwi.kOOA-DX')
-            .should('have.attr', 'src', contact.photo);
+            // Name
+            cy.findByRole('heading', { name: contact.name }).should('exist');
 
-          // Name
-          cy.get('@contact')
-            .find('.sc-eCApnc.eZjoFi')
-            .should('have.text', contact.name);
+            // Phone number
+            cy.findByRole('link', { name: contact.phoneNumber }).should(
+              'have.attr',
+              'href',
+              `tel:${contact.phoneNumber}`
+            );
 
-          // Phone number
-          cy.get('@contact')
-            .find('.sc-jSFjdj.bqbRfE:first-of-type')
-            .should('have.attr', 'href', `tel:${contact.phoneNumber}`)
-            .should('contain', contact.phoneNumber);
-
-          // Email
-          cy.get('@contact')
-            .find('.sc-jSFjdj.bqbRfE:last-of-type')
-            .should('have.attr', 'href', `mailto:${contact.email}`)
-            .should('contain', contact.email);
+            // Email
+            cy.findByRole('link', { name: contact.email }).should(
+              'have.attr',
+              'href',
+              `mailto:${contact.email}`
+            );
+          });
         });
     });
   });
