@@ -57,21 +57,25 @@ describe('ContactForm component', () => {
     // Fill out fields
     const photoField = screen.getByLabelText(/photo/i);
     expect(photoField).toBeInTheDocument();
+    expect(photoField).toHaveAttribute('type', 'url');
     userEvent.type(photoField, contact.photo);
     expect(photoField).toHaveValue(contact.photo);
 
     const nameField = screen.getByLabelText(/name/i);
     expect(nameField).toBeInTheDocument();
+    expect(nameField).toHaveAttribute('type', 'text');
     userEvent.type(nameField, contact.name);
     expect(nameField).toHaveValue(contact.name);
 
     const emailField = screen.getByLabelText(/email/i);
     expect(emailField).toBeInTheDocument();
+    expect(emailField).toHaveAttribute('type', 'email');
     userEvent.type(emailField, contact.email);
     expect(emailField).toHaveValue(contact.email);
 
     const phoneNumberField = screen.getByLabelText(/phone number/i);
     expect(phoneNumberField).toBeInTheDocument();
+    expect(phoneNumberField).toHaveAttribute('type', 'tel');
     userEvent.type(phoneNumberField, contact.phoneNumber);
     expect(phoneNumberField).toHaveValue(contact.phoneNumber);
 
