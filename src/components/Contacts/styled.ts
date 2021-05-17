@@ -19,6 +19,7 @@ export const Button = styled.button<ButtonProps>`
   border-radius: 5px;
   border-width: 1px;
   border-style: solid;
+  font-size: 16px;
   transition: all 0.2s;
   cursor: pointer;
 
@@ -76,6 +77,7 @@ export const Label = styled.label`
   margin-bottom: 5px;
   display: block;
   font-weight: 600;
+  font-size: 16px;
 `;
 
 export const Input = styled.input`
@@ -86,6 +88,7 @@ export const Input = styled.input`
   border-radius: 5px;
   border: 1px solid var(--gray-light);
   background-color: var(--gray-light);
+  font-size: 16px;
   transition: all 0.2s;
 
   &:focus {
