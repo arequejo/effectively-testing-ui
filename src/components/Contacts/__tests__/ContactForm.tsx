@@ -15,6 +15,7 @@ import { FormContact } from '../../../support/types';
 const props = {
   isOpen: true,
   onClose: jest.fn(),
+  onSave: jest.fn(),
 };
 
 // Dummy contact data
